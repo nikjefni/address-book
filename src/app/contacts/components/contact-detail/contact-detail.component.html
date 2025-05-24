@@ -1,1 +1,127 @@
-<p>contact-detail works!</p>
+<!-- user-form.component.html -->
+<div class="w-full p-4">
+  <form
+    [formGroup]="userForm"
+    (ngSubmit)="onSubmit()"
+    class="flex flex-col space-y-4"
+  >
+    <!-- First Name -->
+    <div class="flex flex-col space-y-2">
+      <label class="block font-medium text-gray-700">First Name</label>
+      <input
+        formControlName="firstName"
+        type="text"
+        class="rounded-md shadow-md p-2"
+      />
+      @if (submitted && f['firstName'].errors) {
+      <div class="text-red-600 mt-1">
+        @if (f['firstName'].errors['required']) {
+        <div>First name is required</div>
+        } @if (f['firstName'].errors['minlength']) {
+        <div>Must be at least 2 characters</div>
+        }
+      </div>
+      }
+    </div>
+
+    <!-- Last Name -->
+    <div class="flex flex-col space-y-2">
+      <label class="block font-medium text-gray-700">Last Name</label>
+      <input
+        formControlName="lastName"
+        type="text"
+        class="rounded-md shadow-md p-2"
+      />
+      @if (submitted && f['lastName'].errors) {
+      <div class="text-red-600 mt-1">
+        @if (f['lastName'].errors['required']) {
+        <div>Last name is required</div>
+        } @if (f['lastName'].errors['minlength']) {
+        <div>Must be at least 2 characters</div>
+        }
+      </div>
+      }
+    </div>
+
+    <!-- Email -->
+    <div class="flex flex-col space-y-2">
+      <label class="block font-medium text-gray-700">Email</label>
+      <input
+        formControlName="email"
+        type="email"
+        class="rounded-md shadow-md p-2"
+      />
+      @if (submitted && f['email'].errors) {
+      <div class="text-red-600 mt-1">
+        @if (f['email'].errors['required']) {
+        <div>Email is required</div>
+        } @if (f['email'].errors['email']) {
+        <div>Invalid email format</div>
+        }
+      </div>
+      }
+    </div>
+
+    <!-- Address -->
+    <div class="flex flex-col space-y-2">
+      <label class="block font-medium text-gray-700">Address</label>
+      <input
+        formControlName="address"
+        type="text"
+        class="rounded-md shadow-md p-2"
+      />
+      @if (submitted && f['address'].errors) {
+      <div class="text-red-600 mt-1">
+        @if (f['address'].errors['required']) {
+        <div>Last name is required</div>
+        } @if (f['address'].errors['minlength']) {
+        <div>Must be at least 2 characters</div>
+        }
+      </div>
+      }
+    </div>
+
+    <!-- Phone -->
+    <div class="flex flex-col space-y-2">
+      <label class="block font-medium text-gray-700">Phone</label>
+      <input
+        formControlName="phone"
+        type="tel"
+        class="rounded-md shadow-md p-2"
+      />
+      @if (submitted && f['phone'].errors) {
+      <div class="text-red-600 mt-1">
+        @if (f['phone'].errors['required']) {
+        <div>Phone is required</div>
+        } @if (f['phone'].errors['pattern']) {
+        <div>Invalid phone format</div>
+        }
+      </div>
+      }
+    </div>
+
+    <!-- Buttons -->
+    <div class="flex flex-col space-y-4 pt-4">
+      <button
+        type="submit"
+        class="flex-1 bg-indigo-600 text-white py-2 px-6 rounded-md hover:bg-indigo-700"
+      >
+        Submit
+      </button>
+      <button
+        type="button"
+        (click)="onReset()"
+        class="flex-1 bg-gray-200 text-gray-800 py-2 px-6 rounded-md hover:bg-gray-300"
+      >
+        Reset
+      </button>
+      <button
+        type="button"
+        (click)="onDelete()"
+        class="flex-1 bg-red-600 text-white py-2 px-6 rounded-md hover:bg-gray-300"
+      >
+        Delete
+      </button>
+    </div>
+  </form>
+</div>

@@ -1,0 +1,36 @@
+<button
+  class="floating-btn fixed bottom-8 right-8 w-12 h-12 rounded-full bg-indigo-600 text-white border-0 shadow-md transition-all flex align-middle justify-center hover:scale-105"
+  [routerLink]="['/add']"
+>
+  +
+</button>
+
+<style>
+  .floating-btn {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .floating-btn:hover {
+    transform: scale(1.1);
+    background-color: #0056b3;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+  }
+
+  .floating-btn i {
+    font-size: 24px;
+  }
+</style>
