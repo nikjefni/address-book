@@ -10,7 +10,7 @@ describe('ContactListComponent', () => {
     await TestBed.configureTestingModule({
       imports: [ContactListComponent]
     })
-    .compileComponents();
+      .compileComponents();
 
     fixture = TestBed.createComponent(ContactListComponent);
     component = fixture.componentInstance;
@@ -20,4 +20,7 @@ describe('ContactListComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
+  // it should redirect to contact detail page
+  // it should show list of contacts
 });

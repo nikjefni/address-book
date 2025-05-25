@@ -10,7 +10,7 @@ describe('AddBtnComponent', () => {
     await TestBed.configureTestingModule({
       imports: [AddBtnComponent]
     })
-    .compileComponents();
+      .compileComponents();
 
     fixture = TestBed.createComponent(AddBtnComponent);
     component = fixture.componentInstance;
@@ -20,4 +20,5 @@ describe('AddBtnComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+  //it should redirect to contact detail page
 });

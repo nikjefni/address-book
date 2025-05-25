@@ -35,7 +35,7 @@ export class ContactDetailComponent {
 
   get f() { return this.userForm.controls; }
 
-  private initForm(contact: Contact | undefined): void {
+  initForm(contact: Contact | undefined): void {
     this.userForm = this.fb.group({
       firstName: [contact?.firstName || '', [Validators.required, Validators.minLength(2)]],
       lastName: [contact?.lastName || '', [Validators.required, Validators.minLength(2)]],
@@ -68,3 +68,4 @@ export class ContactDetailComponent {
     this._router.navigate(['/']);
   }
 }
+

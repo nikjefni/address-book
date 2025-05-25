@@ -115,6 +115,7 @@
       >
         Reset
       </button>
+      @if (addOrUpdate === 'update' ) {
       <button
         type="button"
         (click)="onDelete()"
@@ -122,6 +123,7 @@
       >
         Delete
       </button>
+      }
     </div>
   </form>
 </div>

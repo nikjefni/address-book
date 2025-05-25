@@ -10,7 +10,7 @@ describe('HeadingsComponent', () => {
     await TestBed.configureTestingModule({
       imports: [HeadingsComponent]
     })
-    .compileComponents();
+      .compileComponents();
 
     fixture = TestBed.createComponent(HeadingsComponent);
     component = fixture.componentInstance;
@@ -20,4 +20,7 @@ describe('HeadingsComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
+  // it should show the right heading
+  // it should redirect to home page
 });

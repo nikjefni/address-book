@@ -10,7 +10,7 @@ describe('ContactDetailComponent', () => {
     await TestBed.configureTestingModule({
       imports: [ContactDetailComponent]
     })
-    .compileComponents();
+      .compileComponents();
 
     fixture = TestBed.createComponent(ContactDetailComponent);
     component = fixture.componentInstance;
@@ -20,4 +20,10 @@ describe('ContactDetailComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
+  // it should validate form fields
+  // it should call addContact on submit in add mode
+  // it should call patchContact on submit in update mode
+  // it should call deleteContact on delete button click
+  // IT should reset form on reset
 });
